@@ -1,0 +1,6 @@
+[Unit]
+Description=Main Recovery
+
+[Service]
+Type=oneshot
+ExecStart=/home/user/scripts/wlpro_main_recovery.sh

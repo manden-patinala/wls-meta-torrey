@@ -1,0 +1,6 @@
+[Unit]
+Description=Server Socket Recovery
+
+[Service]
+Type=oneshot
+ExecStart=/home/user/scripts/wlpro_server_socket_recovery.sh

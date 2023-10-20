@@ -1,0 +1,13 @@
+[Unit]
+Description=W-Label startup script
+After=syslogd.service systemd-logind.service
+
+[Service]
+Type=forking
+ExecStart=/home/user/scripts/wls_startup.sh
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Server Socket Application
+After=wlpro.service
+# OnFailure=server-socket-recovery.service
+
+[Service]
+Type=simple
+ExecStart=/home/user/backend/server
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

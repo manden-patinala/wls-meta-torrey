@@ -1,0 +1,14 @@
+[Unit]
+Description=Main Application
+After=server-socket.service
+# OnFailure=main-recovery.service
+
+[Service]
+Type=simple
+ExecStart=/home/user/backend/main
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
